@@ -27,7 +27,7 @@ const studentSchema = new mongoose.Schema({
     _id : String,
     name : String,
     course : String,
-    regno : Number
+    regno : Number,
 });
 
 const Student = mongoose.model('Students', studentSchema, 'ruchinew001');  

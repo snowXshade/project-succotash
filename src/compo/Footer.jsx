@@ -3,7 +3,7 @@ import Backbtn from './Backbtn'
 
 const Footer = () => {
   return (
-    <div className='bg-gray-100 py-20 px-20'>
+    <div className='bg-gradient-to-b from-white to-gray-100 py-20 px-20'>
       <footer className="relative text-sm text-gray-500 z-10">
         <div>
           <div className="flex flex-col justify-center items-center pt-6 gap-4">
@@ -12,7 +12,7 @@ const Footer = () => {
             </div>
             <div className="text-center md:text-right">
               <a
-                href="https://github.com/yourusername/yourprojectrepo"
+                href="https://github.com/snowXshade/project-succotash"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-indigo-600 hover:underline"

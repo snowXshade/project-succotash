@@ -10,7 +10,7 @@ const Projects = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-100 text-center" id='projects'>
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100 text-center" id='projects'>
       <h2 className="text-4xl font-bold mb-14 text-gray-800">Projects</h2>
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 px-6 md:px-16">
         {projects.map((project, index) => (

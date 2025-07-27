@@ -39,13 +39,13 @@ export default function Navbar() {
 
             <div className="flex gap-6 mt-10 text-2xl">
               <a
-          href="mailto:your.email@example.com"
+          href="mailto:sruchi73@example.com"
 className="flex flex-row gap-2 items-center justify-center bg-white text-black hover:bg-emerald-200
  px-4 py-2 mt-7 rounded-xl shadow-lg hover:text-gray-800  transition-all"        >
           <Mail className="w-5 h-5" /> Email
         </a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="www.linkedin.com/in/uruchisharma"
           target="_blank"
           rel="noopener noreferrer"
 className=" flex flex-row gap-2 items-center justify-center bg-white text-black hover:bg-emerald-200
@@ -53,7 +53,7 @@ className=" flex flex-row gap-2 items-center justify-center bg-white text-black 
           <Linkedin className="w-5 h-5" /> LinkedIn
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/snowXshade"
           target="_blank"
           rel="noopener noreferrer"
 className="flex flex-row gap-2 items-center justify-center bg-white text-black hover:bg-emerald-200

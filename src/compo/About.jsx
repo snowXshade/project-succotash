@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen px-6 py-20 bg-white text-black overflow-hidden flex items-center justify-center"
+      className="relative min-h-screen px-6 py-20 bg-gray-50 text-black overflow-hidden flex items-center justify-center"
     >
       {/* Floating bubbles background */}
       <div className="absolute inset-0 z-0 pointer-events-none">

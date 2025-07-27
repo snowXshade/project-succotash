@@ -30,29 +30,29 @@ const Contact = () => {
   };
 
   return (
-    <section id="connect" className="py-20 bg-gradient-to-b from-white to-gray-100 px-6 md:px-16">
+    <section id="connect" className="py-20 bg-gradient-to-b from-gray-100 to-white px-6 md:px-16">
       <h2 className="text-4xl font-bold mb-10 text-center text-gray-800">Connect with Me</h2>
 
       <div className="flex justify-center gap-6 mb-12 flex-wrap">
         <a
-          href="mailto:your.email@example.com"
-          className="flex items-center gap-2 px-5 py-3 bg-white text-black hover:scale-105 hover:bg-gray-50 transition-all duration-200 rounded-xl shadow-md hover:opacity-90"
+          href="mailto:sruchi73@gmail.com"
+          className="flex items-center gap-2 px-5 py-3 bg-white text-black hover:scale-105 hover:bg-gray-50 transition-all duration-100 rounded-xl shadow-md hover:opacity-90"
         >
           <Mail className="w-5 h-5" /> Email
         </a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/uruchisharma"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-3 bg-white text-black hover:scale-105 hover:bg-gray-50 transition-all duration-200 rounded-xl shadow-md hover:opacity-90"
+          className="flex items-center gap-2 px-5 py-3 bg-white text-black hover:scale-105 hover:bg-gray-50 transition-all duration-100 rounded-xl shadow-md hover:opacity-90"
         >
           <Linkedin className="w-5 h-5" /> LinkedIn
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/snowXshade"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-3 bg-white text-black hover:scale-105 hover:bg-gray-50 transition-all duration-200 rounded-xl shadow-md hover:opacity-90"
+          className="flex items-center gap-2 px-5 py-3 bg-white text-black hover:scale-105 hover:bg-gray-50 transition-all duration-100 rounded-xl shadow-md hover:opacity-90"
         >
           <Github className="w-5 h-5" /> GitHub
         </a>
@@ -105,7 +105,7 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full py-3 bg-gradient-to-r from-black to-gray-700 text-white rounded-lg hover:opacity-90"
+          className="w-full py-3  bg-emerald-200 hover:bg-black hover:text-white rounded-lg transition-all duration-300"
         >
           Send Message
         </button>

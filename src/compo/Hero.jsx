@@ -5,14 +5,14 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 pt-24 bg-gradient-to-b from-gray-100 to-white text-black"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 pt-24 bg-gradient-to-b from-gray-200 to-gray-50 text-black"
     >
       {/* Profile Image */}
       <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
         <img
           src={profilePic}
           alt="Ruchi"
-          className="rounded-full w-60 h-60 object-cover shadow-xl"
+          className="rounded-full w-60 h-60 object-cover shadow-xl hover:scale-110 transition-all duration-500"
         />
       </div>
 
