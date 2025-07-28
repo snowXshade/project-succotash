@@ -1,11 +1,10 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 const PORT = 3000;
 
-require('dotenv').config(); 
-const mongoUrl = process.env.MONGO_URL;
-const cors = require('cors');
-const mongoose = require('mongoose');
+import 'dotenv/config.js'
+import cors from 'cors'
+import mongoose from 'mongoose';
 
 // ENABLE CORS AND JSON PARSING
 
@@ -13,18 +12,17 @@ app.use(cors());
 app.use(express.json());
 
 //MONGODB ATLAS CONNECT
-
+const mongoUrl = process.env.MONGO_URL;
 const MONGO_URI = mongoUrl;
 
 mongoose.connect(MONGO_URI, {
     useNewUrlParser : true,
     useUnifiedTopology: true
-}).then(()=> console.log('db connected')).catch((err)=> console.log('error in db connection'));
+}).then(()=> console.log('db connected')).catch(()=> console.log('error in db connection'));
 
 //SCHEMA DESIGN STUDENT
 
 const studentSchema = new mongoose.Schema({
-    _id : String,
     name : String,
     course : String,
     regno : Number,
@@ -40,24 +38,24 @@ app.get('/students', async(req,res) => {
         const students = await Student.find();
         res.json(students);
     }catch(err){
-        res.status(500).json({error: 'Error in fetching students'});
+        res.status(500).json({message:  'Error in fetching students',err});
     }
 });
 
 // POST STUDENT
 
 app.post('/students', async(req,res)=> {
-    const {_id,name,course,regno} = req.body;
+    const {name,course,regno} = req.body;
 
     if(!name || !course){
         return res.status(400).json({error :'Name and course are required'});
 }
         try{
-            const newStudent = new Student({_id,name,course,regno});
+            const newStudent = new Student({name,course,regno});
             const savedStudent = await newStudent.save();
             res.status(201).json(savedStudent); 
-        }catch(err){
-            res.status(500).json({error : 'Error saving data od student'});
+        }catch(error){
+            res.status(500).json({message : 'Error saving data od student',error});
         }
     
 });
@@ -79,7 +77,7 @@ app.get('/wgt', async(req,res) => {
         const weight = await Weight.find();
         res.json(weight);
     }catch(err){
-        res.status(500).json({error: 'Error in fetching data from server : GET'});
+        res.status(500).json({success: false ,message: 'Error in fetching data from server : GET',err});
     }
 });
 
@@ -96,7 +94,7 @@ app.post('/wgt', async(req,res)=> {
             const savedWeight = await newWeight.save();
             res.status(201).json(savedWeight); 
         }catch(err){
-            res.status(500).json({error : 'Error saving data from backend to mongo'});
+            res.status(500).json({success: false ,message : 'Error saving data from backend to mongo',err});
         }
     
 });
@@ -122,7 +120,7 @@ app.get('/contact', async (req, res) => {
         const contacts = await Contact.find();
         res.json(contacts);
     } catch (err) {
-        res.status(500).json({ error: 'Error fetching contact form data' });
+        res.status(500).json({ success: false ,message:  'Error fetching contact form data',err });
     }
 });
 
@@ -131,7 +129,7 @@ app.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
-        return res.status(400).json({ error: 'Name, email, and message are required' });
+        return res.status(400).json({ success: false ,message:  'Name, email, and message are required' });
     }
 
     try {
@@ -139,7 +137,7 @@ app.post('/contact', async (req, res) => {
         const savedContact = await newContact.save();
         res.status(201).json(savedContact);
     } catch (err) {
-        res.status(500).json({ error: 'Error saving contact form data' });
+        res.status(500).json({ success: false ,message: 'Error saving contact form data',err });
     }
 });
 

@@ -12,10 +12,12 @@ const StudentDashboard = () => {
 
   // Fetch students from backend
   const fetchStudents = async () => {
+
     try {
       const res = await axios.get(API_URL);
       setStudents(res.data);
     } catch (err) {
+      alert("no backend server initialted at 3000 port!");
       console.error('Error fetching students:', err);
     }
   };
@@ -34,6 +36,7 @@ const StudentDashboard = () => {
       setRegno('');
       fetchStudents(); // refresh list
     } catch (err) {
+      alert("failed to add data!");
       console.error('Error adding student:', err);
     }
   };
