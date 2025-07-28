@@ -11,7 +11,7 @@ const StudentDashboard = () => {
   const API_URL = 'http://localhost:3000/students';
 
   // Fetch students from backend
-  const fetchStudents = async () => {
+  const fetchStudents = async (req,res) => {
     try {
       const res = await axios.get(API_URL);
       setStudents(res.data);
