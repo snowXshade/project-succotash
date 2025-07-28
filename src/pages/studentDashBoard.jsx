@@ -8,20 +8,22 @@ const StudentDashboard = () => {
   const [course, setCourse] = useState('');
   const [regno, setRegno] = useState('');
 
-  const API_URL = 'http://localhost:3000/students';
+    const API_URL = 'http://localhost:3000/students';
 
   // Fetch students from backend
-  const fetchStudents = async (req,res) => {
+  const fetchStudents = async () => {
+
     try {
       const res = await axios.get(API_URL);
       setStudents(res.data);
     } catch (err) {
+      alert("no backend server initialted at 3000 port!");
       console.error('Error fetching students:', err);
     }
   };
 
   // Add new student
-  const addStudent = async () => {
+  const addStudent = async (req ,res) => {
     if (!name.trim() || !course.trim() || !regno.trim()) {
       alert('Please fill in all name, course and regno.');
       return;
@@ -34,10 +36,10 @@ const StudentDashboard = () => {
       setRegno('');
       fetchStudents(); // refresh list
     } catch (err) {
+      alert("failed to add data!");
       console.error('Error adding student:', err);
     }
   };
-
   useEffect(() => {
     fetchStudents();
   }, []);
@@ -78,7 +80,7 @@ const StudentDashboard = () => {
         </div>
 
         {/* STUDENT DATA INPUT FORM */}
-        <div className='w-auto md:w-2/3 lg:w-1/4 bg-white px-2 py-2 m-1.5 md:m-8 border border-none rounded-2xl shadow-lg flex flex-wrap flex-col gap-2'>
+        <div className='w-auto md:w-2/3 lg:w-1/4 bg-white px-2 py-2 m-1.5 md:m-8 border border-none rounded-2xl shadow-lg flex flex-wrap flex-col gap-2 h-[fit-content]'>
           <h2 className='text-gray-500 font-bold text-xl py-4 px-4' style={{ marginTop: '30px' }}>Add New Student</h2>
 
           <input
