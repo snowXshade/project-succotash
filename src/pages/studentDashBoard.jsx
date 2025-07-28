@@ -23,7 +23,7 @@ const StudentDashboard = () => {
   };
 
   // Add new student
-  const addStudent = async (req ,res) => {
+  const addStudent = async () => {
     if (!name.trim() || !course.trim() || !regno.trim()) {
       alert('Please fill in all name, course and regno.');
       return;
