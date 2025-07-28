@@ -8,7 +8,7 @@ const StudentDashboard = () => {
   const [course, setCourse] = useState('');
   const [regno, setRegno] = useState('');
 
-  const API_URL = 'http://localhost:3000/students';
+    const API_URL = 'http://localhost:3000/students';
 
   // Fetch students from backend
   const fetchStudents = async () => {
@@ -40,7 +40,6 @@ const StudentDashboard = () => {
       console.error('Error adding student:', err);
     }
   };
-
   useEffect(() => {
     fetchStudents();
   }, []);
@@ -81,7 +80,7 @@ const StudentDashboard = () => {
         </div>
 
         {/* STUDENT DATA INPUT FORM */}
-        <div className='w-auto md:w-2/3 lg:w-1/4 bg-white px-2 py-2 m-1.5 md:m-8 border border-none rounded-2xl shadow-lg flex flex-wrap flex-col gap-2'>
+        <div className='w-auto md:w-2/3 lg:w-1/4 bg-white px-2 py-2 m-1.5 md:m-8 border border-none rounded-2xl shadow-lg flex flex-wrap flex-col gap-2 h-[fit-content]'>
           <h2 className='text-gray-500 font-bold text-xl py-4 px-4' style={{ marginTop: '30px' }}>Add New Student</h2>
 
           <input
