@@ -7,7 +7,7 @@ const Contact = () => {
   const [result, setResult] = useState('');
   const [isEmailValid, setIsEmailValid] = useState(true);
 
-  const allowedDomains = ['gmail.com', 'yahoo.com', 'outlook.com'];
+  const allowedDomains = ['gmail.com', 'yahoo.com', 'outlook.com','hotmail.com','	aol.com','hotmail.co.uk','msn.com','yahoo.co.in','live.com','rediffmail.com','yahoo.in'];
 
   const isAllowedEmail = (email) => {
     const domain = email.split('@')[1];
