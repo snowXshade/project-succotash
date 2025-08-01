@@ -3,6 +3,7 @@ import menu from '../assets/menu.png';
 import close from '../assets/close.png'
 import logo from '../assets/logo.png'
 import { Mail, Linkedin, Github } from 'lucide-react';
+import BigMenu from './BigMenu';
 
 
 export default function Navbar() {

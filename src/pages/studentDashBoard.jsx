@@ -8,13 +8,13 @@ const StudentDashboard = () => {
   const [course, setCourse] = useState('');
   const [regno, setRegno] = useState('');
 
-    const API_URL = 'http://localhost:3000/students';
+    const API_URL = import.meta.env.VITE_API_URL;
 
   // Fetch students from backend
   const fetchStudents = async () => {
 
     try {
-      const res = await axios.get(API_URL);
+      const res = await axios.get(API_URL+'/students');
       setStudents(res.data);
     } catch (err) {
       alert("no backend server initialted at 3000 port!");

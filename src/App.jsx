@@ -11,7 +11,9 @@ import Todo from './pages/Todo'
 const App = () => {
   return (
     <div>
+      
       <Navbar />
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/students' element={<StudentDashboard />}/>

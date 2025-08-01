@@ -1,7 +1,7 @@
 // Projects.jsx
 
 import React from 'react';
-import projects from './pro';  // import the data from your projects.js file
+import projects from './pro';  
 
 import { useNavigate } from "react-router-dom"
 import github from '../assets/github.png'
@@ -12,6 +12,7 @@ const Projects = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100 text-center" id='projects'>
       <h2 className="text-4xl font-bold mb-14 text-gray-800">Projects</h2>
+      <p>Disclaimer : to view this project you need to connect mongo bd local host connection and also need to ensure jwt in env file </p>
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 px-6 md:px-16">
         {projects.map((project, index) => (
           <div

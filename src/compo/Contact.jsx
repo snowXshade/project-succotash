@@ -3,11 +3,12 @@ import validator from 'validator';
 import { Mail, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
+  // const key = import.meta.env.API_KEY_EMAIL;
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [result, setResult] = useState('');
   const [isEmailValid, setIsEmailValid] = useState(true);
 
-  const allowedDomains = ['gmail.com', 'yahoo.com', 'outlook.com','hotmail.com','	aol.com','hotmail.co.uk','msn.com','yahoo.co.in','live.com','rediffmail.com','yahoo.in'];
+  const allowedDomains = ['gmail.com', 'yahoo.com', 'outlook.com','hotmail.com','aol.com','hotmail.co.uk','msn.com','yahoo.co.in','live.com','rediffmail.com','yahoo.in'];
 
   const isAllowedEmail = (email) => {
     const domain = email.split('@')[1];
@@ -98,7 +99,7 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your name"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-2 border border-emerald-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-200"
           />
         </div>
 
@@ -111,7 +112,7 @@ const Contact = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="you@example.com"
-            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 ${isEmailValid ? 'focus:ring-indigo-500' : 'border-red-400 focus:ring-red-400'}`}
+            className={`w-full px-4 py-2 border border-emerald-100 rounded-lg focus:outline-none focus:ring-2 ${isEmailValid ? 'focus:ring-emerald-200' : 'border-red-400 focus:ring-red-400'}`}
           />
           {!isEmailValid && <p className="text-red-500 text-sm mt-1">Invalid email address.</p>}
         </div>
@@ -125,7 +126,7 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Let's connect for work, freelance, or collaboration!"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-2 border border-emerald-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-200"
           ></textarea>
         </div>
 
