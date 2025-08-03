@@ -25,12 +25,12 @@ const Projects = () => {
               <p className="text-sm text-gray-500 mb-6 font-semibold">Technologies: {project.tech.join(', ')}</p>
             </div>
             <div className="flex flex-row gap-7 flex-wrap items-center justify-center">
-              <p
-                onClick={() => {navigate(`/${project.url}`, scrollTo(0,0))}}
-                className="inline-block cursor-pointer mt-auto px-4 py-2 bg-emerald-200 text-gray-800 rounded-lg hover:bg-black hover:text-white transition-all"
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View GitHub Repository"
               >
-                View Project
-              </p>
                 <img
                   className="w-9 h-9 cursor-pointer hover:scale-105 transition-all duration-300"
                   src={github}
