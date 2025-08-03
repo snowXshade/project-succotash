@@ -31,12 +31,6 @@ const Projects = () => {
               >
                 View Project
               </p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="View GitHub Repository"
-              >
                 <img
                   className="w-9 h-9 cursor-pointer hover:scale-105 transition-all duration-300"
                   src={github}

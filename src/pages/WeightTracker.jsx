@@ -10,12 +10,12 @@ const WeightTracker = () => {
     const [date, setDate] = useState('');
     const [wgt, setWgt] = useState('');
 
-    const API_URL = import.meta.env.VITE_API_URL;
+    const API_URL = 'http://localhost:3000/wgt';
 
     //FETCHING DATA FROM BACKEND
     const fetchData = async () => {
         try {
-            const res = await axios.get(API_URL+'/wgt');
+            const res = await axios.get(API_URL);
             setFormData(res.data);
         } catch (err) {
             console.error('Error fetching data from backend', err);
@@ -51,6 +51,7 @@ const WeightTracker = () => {
 
     return (
         <div className='flex flex-col items-center justify-center'>
+        <div>Welcome</div>
             <div className='w-full flex flex-col gap-2 lg:gap-20 items-center justify-center lg:flex-row py-2 px-2 mt-8 lg:pt-[100px]'>
                 {/* FORM  */}
                 <div className=' w-auto lg:w-1/5 flex gap-3.5 px-6  flex-col items-start pb-4 border-r border-gray-400'>
